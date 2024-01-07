@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import java.net.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalfrontend.HomepageController">
+   <StackPane>
+      <VBox>
+         <HBox spacing="20" alignment="TOP_RIGHT" HBox.hgrow="ALWAYS" AnchorPane.rightAnchor="1">
+            <Button fx:id="closeJournal" text="Close Journal" onAction="#closeJournal" styleClass="button"/>
+         </HBox>
+      </VBox>
+   </StackPane>
+   
+   <children>
+      <GridPane hgap="20" vgap="20" alignment="CENTER">
+         <!-- Entry Content ListView -->
+         <VBox GridPane.columnIndex="0">
+            <Label text=""/>
+            <ListView fx:id="entryView" prefWidth="600" prefHeight="800" styleClass="list-cell"/>
+         </VBox>
+
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER"/>
+         </columnConstraints>
+
+         <rowConstraints>
+            <RowConstraints valignment="CENTER"/>
+         </rowConstraints>
+
+      </GridPane>
+
+      <HBox spacing="10.0" alignment="CENTER">
+         <Button fx:id="addEntry" text="Add Entry" onAction="#addEntry" styleClass="button"/>
+      </HBox>
+   </children>
+
+   <padding>
+      <Insets bottom ="20" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+
+   <stylesheets>
+      <URL value="@styles.css"/>
+   </stylesheets>
+</VBox>
