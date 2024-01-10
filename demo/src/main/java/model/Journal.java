@@ -4,6 +4,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
@@ -59,6 +60,7 @@ public class Journal extends JournalConstants {
 
     protected boolean addEntry(Entry aE) {
         journalEntries.add(aE);
+        sortEntries();
         return true;
     }
 
@@ -82,6 +84,7 @@ public class Journal extends JournalConstants {
         if (checkIfEntryExists || checkIfUnchanged) {
             removeEntry(entryToEdit);
             journalEntries.add(entryToEdit);
+            sortEntries();
             return true;
         }
         return false;
@@ -134,6 +137,14 @@ public class Journal extends JournalConstants {
     protected void saveJournal(String saveFile, JournalDecoder jd) throws InvalidKeyException, NoSuchAlgorithmException,
             NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
         DataWriter.saveEntries(journalEntries, saveFile, jd);
+    }
+
+    private void sortEntries() {
+        ArrayList<Entry> sortedEntries = new ArrayList<>();
+        for (Entry entry : journalEntries)
+            sortedEntries.add(entry);
+        Collections.sort(sortedEntries);
+        journalEntries = sortedEntries;
     }
 
 }
