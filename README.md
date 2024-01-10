@@ -1,5 +1,5 @@
 ## journal-java
-Simple jounaling program in Java that uses a password-based cipher to encode entry content for more privacy.
+Simple jounaling program in Java that uses the Blowfish encryption algorithm to encode entry content for more privacy.
 
 ## Roadmap
 - Add module options when adding a new entry
