@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import java.net.*?>
 
-<VBox spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalfrontend.HomepageController">
+<VBox spacing="30.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalfrontend.HomepageController">
    <StackPane>
       <VBox>
          <HBox spacing="20" alignment="TOP_RIGHT" HBox.hgrow="ALWAYS" AnchorPane.rightAnchor="1">
@@ -23,11 +23,11 @@
    </StackPane>
    
    <children>
-      <GridPane hgap="20" vgap="20" alignment="CENTER">
+      <GridPane hgap="10" vgap="20" alignment="CENTER">
          <!-- Entry Content ListView -->
          <VBox GridPane.columnIndex="0">
             <Label text=""/>
-            <ListView fx:id="entryView" prefWidth="600" prefHeight="800" styleClass="list-cell"/>
+            <ListView fx:id="entryView" prefWidth="800" prefHeight="1000" styleClass="list-cell"/>
          </VBox>
 
          <columnConstraints>

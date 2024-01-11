@@ -16,7 +16,7 @@
 }
 
 .primary-button:hover {
-    -fx-background-color: #fd7f62;
+    -fx-background-color: #ff6c4a;
 }
 
 .button {
@@ -25,12 +25,13 @@
 }
 
 .button:hover {
-    -fx-background-color: #fd7f62;
+    -fx-background-color: #ff6c4a;
 }
 
 .list-cell {
-    -fx-background-color: #ffc1b8;
-    -fx-alignment: center;
+    -fx-background-color: #ffb5aa, #ffc1b8;
+    -fx-background-insets: 0, 2 2 2 2;
+    -fx-alignment: right;
     -fx-text-fill: rgb(34, 34, 34);
 }
 
@@ -42,15 +43,15 @@
 
 .list-cell:filled {
     -fx-background-color: #ff9d88;
-    -fx-background-insets: 3, 3;
+    -fx-background-insets: 5, 5;
 }
 
 .list-cell:filled:selected {
-    -fx-background-color: #fb6e4f;
+    -fx-background-color: #fa7a5d;
 }
 
 .list-cell:filled:hover {
-    -fx-background-color: #fa7e63;
+    -fx-background-color: #fb8c73;
 }
 
 .list-cell:empty:selected {

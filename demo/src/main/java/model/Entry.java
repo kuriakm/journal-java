@@ -5,8 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Entry implements Comparable<Entry> {
-    private String timeOfEntry;
-    private String entryContent;
+    private String timeOfEntry, entryContent;
     private ArrayList<String> moduleContent;
 
     private static final DateTimeFormatter format = DateTimeFormatter.ofPattern("uuuu-MM-dd, HH:mm:ss");
