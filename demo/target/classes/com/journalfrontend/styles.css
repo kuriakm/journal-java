@@ -30,7 +30,7 @@
 
 .list-cell {
     -fx-background-color: #ffb5aa, #ffc1b8;
-    -fx-background-insets: 0, 2 2 2 2;
+    -fx-background-insets: 0, 1 1 1 1;
     -fx-alignment: right;
     -fx-text-fill: rgb(34, 34, 34);
 }
